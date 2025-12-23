@@ -1,0 +1,13 @@
+{
+  "itemGroup.winter_custom_attributes": "Example Mod Tab",
+  "block.winter_custom_attributes.example_block": "Example Block",
+  "item.winter_custom_attributes.example_item": "Example Item",
+
+  "winter_custom_attributes.configuration.title": "Winter Custom Attributes Configs",
+  "winter_custom_attributes.configuration.section.winter_custom_attributes.common.toml": "Winter Custom Attributes Configs",
+  "winter_custom_attributes.configuration.section.winter_custom_attributes.common.toml.title": "Winter Custom Attributes Configs",
+  "winter_custom_attributes.configuration.items": "Item List",
+  "winter_custom_attributes.configuration.logDirtBlock": "Log Dirt Block",
+  "winter_custom_attributes.configuration.magicNumberIntroduction": "Magic Number Text",
+  "winter_custom_attributes.configuration.magicNumber": "Magic Number"
+}

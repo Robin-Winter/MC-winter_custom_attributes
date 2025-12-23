@@ -1,0 +1,12 @@
+{
+  "required": true,
+  "package": "com.winter.winter_custom_attributes.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "overwrites": {
+    "requireAnnotations": true
+  }
+}
