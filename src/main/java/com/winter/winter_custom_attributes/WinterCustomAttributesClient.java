@@ -24,8 +24,6 @@ public class WinterCustomAttributesClient {
 
     @SubscribeEvent
     static void onClientSetup(FMLClientSetupEvent event) {
-        // Some client setup code
-        WinterCustomAttributes.LOGGER.info("HELLO FROM CLIENT SETUP");
-        WinterCustomAttributes.LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
+
     }
 }
