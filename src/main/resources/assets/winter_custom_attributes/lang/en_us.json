@@ -10,6 +10,9 @@
   "winter_custom_attributes.configuration.logDirtBlock": "Log Dirt Block",
   "winter_custom_attributes.configuration.magicNumberIntroduction": "Magic Number Text",
   "winter_custom_attributes.configuration.magicNumber": "Magic Number",
+  "attributes.winter_custom_attributes.onHitGainRageChance": "On Hit: Gain Rage Chance",
 
-  "effect.winter_custom_attributes.rage": "Rage"
+  "effect.winter_custom_attributes.rage": "Rage",
+
+  "winter_custom_attributes.generic_experience": "Generic Experience"
 }

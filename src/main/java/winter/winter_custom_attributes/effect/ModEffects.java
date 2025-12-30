@@ -1,6 +1,6 @@
-package com.winter.winter_custom_attributes.effect;
+package winter.winter_custom_attributes.effect;
 
-import com.winter.winter_custom_attributes.WinterCustomAttributes;
+import winter.winter_custom_attributes.WinterCustomAttributes;
 import net.minecraft.core.Holder;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;

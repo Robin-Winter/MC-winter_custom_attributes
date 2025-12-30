@@ -1,6 +1,5 @@
-package com.winter.winter_custom_attributes;
+package winter.winter_custom_attributes;
 
-import net.minecraft.client.Minecraft;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.ModContainer;

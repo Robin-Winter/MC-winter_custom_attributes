@@ -1,4 +1,4 @@
-package com.winter.winter_custom_attributes.effect;
+package winter.winter_custom_attributes.effect;
 
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectCategory;

@@ -1,4 +1,4 @@
-package com.winter.winter_custom_attributes.mixin;
+package winter.winter_custom_attributes.mixin;
 
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
