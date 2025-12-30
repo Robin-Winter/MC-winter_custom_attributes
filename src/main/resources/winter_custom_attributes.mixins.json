@@ -2,7 +2,12 @@
   "required": true,
   "package": "com.winter.winter_custom_attributes.mixin",
   "compatibilityLevel": "JAVA_21",
-  "mixins": [],
+  "mixins": [
+    "ItemMixin"
+  ],
+  "client": [
+
+  ],
   "injectors": {
     "defaultRequire": 1
   },

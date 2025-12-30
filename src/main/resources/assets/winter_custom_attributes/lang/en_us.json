@@ -9,5 +9,7 @@
   "winter_custom_attributes.configuration.items": "Item List",
   "winter_custom_attributes.configuration.logDirtBlock": "Log Dirt Block",
   "winter_custom_attributes.configuration.magicNumberIntroduction": "Magic Number Text",
-  "winter_custom_attributes.configuration.magicNumber": "Magic Number"
+  "winter_custom_attributes.configuration.magicNumber": "Magic Number",
+
+  "effect.winter_custom_attributes.rage": "Rage"
 }

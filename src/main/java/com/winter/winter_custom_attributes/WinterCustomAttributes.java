@@ -1,5 +1,6 @@
 package com.winter.winter_custom_attributes;
 
+import com.winter.winter_custom_attributes.effect.ModEffects;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -48,6 +49,9 @@ public class WinterCustomAttributes {
         // Note that this is necessary if and only if we want *this* class (WinterCustomAttributes) to respond directly to events.
         // Do not add this line if there are no @SubscribeEvent-annotated functions in this class, like onServerStarting() below.
         NeoForge.EVENT_BUS.register(this);
+
+
+        ModEffects.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
