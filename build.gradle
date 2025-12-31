@@ -124,8 +124,8 @@ dependencies {
     implementation "net.puffish:attributesmod:0.8.0+1.21:neoforge"
 
     // This adds the library to all the runs
-    additionalRuntimeClasspath "net.puffish:skillsmod:0.17.1+1.21:neoforge"
-    additionalRuntimeClasspath "net.puffish:attributesmod:0.8.0+1.21:neoforge"
+    //additionalRuntimeClasspath "net.puffish:skillsmod:0.17.1+1.21:neoforge"
+    //additionalRuntimeClasspath "net.puffish:attributesmod:0.8.0+1.21:neoforge"
 
     // Example optional mod dependency with JEI
     // The JEI API is declared for compile time use, while the full JEI artifact is used at runtime

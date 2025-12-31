@@ -32,7 +32,6 @@ public class WinterCustomAttributes {
         AttributesRegistry.ATTRIBUTES.register(modEventBus);
         ModEffects.register(modEventBus);
         GenericExperienceSource.register();
-
         modEventBus.addListener(this::addCreative);
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }
@@ -42,7 +41,11 @@ public class WinterCustomAttributes {
     }
 
     private void commonSetup(FMLCommonSetupEvent event) {
-
+       // if (Config.LOG_DIRT_BLOCK.getAsBoolean()) {
+        //    LOGGER.info("DIRT BLOCK >> {}", BuiltInRegistries.BLOCK.getKey(Blocks.DIRT));
+       // }
+        //LOGGER.info("{}{}", Config.MAGIC_NUMBER_INTRODUCTION.get(), Config.MAGIC_NUMBER.getAsInt());
+        //Config.ITEM_STRINGS.get().forEach((item) -> LOGGER.info("ITEM >> {}", item));
     }
 
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
@@ -51,6 +54,6 @@ public class WinterCustomAttributes {
 
     @SubscribeEvent
     public void onServerStarting(ServerStartingEvent event) {
-
+       // LOGGER.info("HELLO from server starting");
     }
 }

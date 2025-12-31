@@ -22,7 +22,7 @@ public class GenericExperienceSource implements ExperienceSource {
 
     static {
         PROTOTYPE.registerOperation(WinterCustomAttributes.location("player"), BuiltinPrototypes.PLAYER, OperationFactory.create(Data::player));
-        PROTOTYPE.registerOperation(WinterCustomAttributes.location("experienceGained"), BuiltinPrototypes.NUMBER, OperationFactory.create(Data::experienceGained));
+        PROTOTYPE.registerOperation(WinterCustomAttributes.location("experience_gained"), BuiltinPrototypes.NUMBER, OperationFactory.create(Data::experience_gained));
     }
 
     private final Calculation<Data> calculation;
@@ -39,10 +39,10 @@ public class GenericExperienceSource implements ExperienceSource {
         return context.getData().andThen((rootElement -> LegacyCalculation.parse(rootElement, PROTOTYPE, context).mapSuccess(GenericExperienceSource::new)));
     }
 
-    private record Data(ServerPlayer player, double experienceGained) { }
+    private record Data(ServerPlayer player, double experience_gained) { }
 
-    public int getValue(final ServerPlayer player, final int experienceGained) {
-        return (int) calculation.evaluate(new Data(player, experienceGained));
+    public int getValue(final ServerPlayer player, final int experience_gained) {
+        return (int) calculation.evaluate(new Data(player, experience_gained));
     }
 
     @Override
