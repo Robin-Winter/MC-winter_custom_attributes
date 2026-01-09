@@ -5,21 +5,37 @@ import net.minecraft.core.Holder;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.RangedAttribute;
-import net.neoforged.bus.api.SubscribeEvent;
-import net.neoforged.neoforge.event.entity.EntityAttributeModificationEvent;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import winter.winter_custom_attributes.WinterCustomAttributes;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class AttributesRegistry {
 
     public static final DeferredRegister<Attribute> ATTRIBUTES = DeferredRegister.create(BuiltInRegistries.ATTRIBUTE, WinterCustomAttributes.MODID);
-    public static final Holder<Attribute> rage_onhit_gain_chance = registerNewAttribute("rage_onhit_gain_chance", 0, -100, 100);
-    public static final Holder<Attribute> fortify_onhurt_gain_chance = registerNewAttribute("fortify_onhurt_gain_chance", 0, -100, 100);
-    public static final Holder<Attribute> fortify_duration = registerNewAttribute("fortify_duration", 2, -1024, 1024);
-    public static final Holder<Attribute> fortify_strength = registerNewAttribute("fortify_strength", 1, -1024, 1024);
+    public static final Holder<Attribute> meele_crit_chance = registerNewAttribute("meele_crit_chance", 0, -1, 1);
+    public static final Holder<Attribute> meele_crit_damage = registerNewAttribute("meele_crit_damage", 1, -10, 10);
+    public static final Holder<Attribute> ranged_crit_chance = registerNewAttribute("ranged_crit_chance", 0, -1, 1);
+    public static final Holder<Attribute> ranged_crit_damage = registerNewAttribute("ranged_crit_damage", 1, -10, 10);
+    public static final Holder<Attribute> armor_durability = registerNewAttribute("armor_durability", 1, 0, 10);
+    public static final Holder<Attribute> weapon_durability = registerNewAttribute("weapon_durability", 1, 0, 10);
+    public static final Holder<Attribute> rage_meele_gain_chance = registerNewAttribute("rage_meele_gain_chance", 0, -1, 1);
+    public static final Holder<Attribute> rage_ranged_gain_chance = registerNewAttribute("rage_ranged_gain_chance", 0, -1, 1);
+    public static final Holder<Attribute> rage_onhurt_gain_chance = registerNewAttribute("rage_onhurt_gain_chance", 0, -1, 1);
+    public static final Holder<Attribute> rage_duration = registerNewAttribute("rage_duration", 40, 0, 1024);
+    public static final Holder<Attribute> fortify_onhurt_gain_chance = registerNewAttribute("fortify_onhurt_gain_chance", 1, -1, 1);
+    public static final Holder<Attribute> fortify_onblock_gain_chance = registerNewAttribute("fortify_onblock_gain_chance", 0, -1, 1);
+    public static final Holder<Attribute> fortify_duration = registerNewAttribute("fortify_duration", 40, 0, 1024);
+    public static final Holder<Attribute> fortify_armor = registerNewAttribute("fortify_armor", 0, -1024, 1024);
+    public static final Holder<Attribute> fortify_toughness = registerNewAttribute("fortify_toughness", 0, -1024, 1024);
+    public static final Holder<Attribute> fortify_absorption = registerNewAttribute("fortify_absorption", 0, -1024, 1024);
+    public static final Holder<Attribute> slow_strength = registerNewAttribute("slow_strength", 1, 1, 10);
+    public static final Holder<Attribute> slow_duration = registerNewAttribute("slow_duration", 40, 0, 1024);
+    public static final Holder<Attribute> slow_meele_inflict_chance = registerNewAttribute("slow_meele_inflict_chance", 0, -1, 1);
+    public static final Holder<Attribute> slow_ranged_inflict_chance = registerNewAttribute("slow_ranged_inflict_chance", 0, -1, 1);
 
-    public static Holder<Attribute> registerNewAttribute(String name, int defaultValue, int minValue, int maxValue) {
-        WinterCustomAttributes.LOGGER.warn("Added attribute: attributes." + WinterCustomAttributes.MODID + ".{}", name);
+    public static Holder<Attribute> registerNewAttribute(String name, double defaultValue, double minValue, double maxValue) {
         return ATTRIBUTES.register(name, () -> new RangedAttribute("attributes." + WinterCustomAttributes.MODID + "." + name,  defaultValue, minValue, maxValue));
     }
 }

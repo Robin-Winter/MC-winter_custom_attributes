@@ -7,8 +7,22 @@
   "winter_custom_attributes.configuration.magicNumberIntroduction": "Magic Number Text",
   "winter_custom_attributes.configuration.magicNumber": "Magic Number",
 
-  "attribute.winter_custom_attributes.onHitGainRageChance": "On Hit: Gain Rage Chance",
-  "attribute.winter_custom_attributes.onHitGainRageChance.desc": "Chance to get Rage Effect when hitting an enemy.",
+  "effect.winter_custom_attributes.rage_onhit_gain_chance": "Rage: On Hitting Chance",
+  "effect.winter_custom_attributes.rage_onhurt_gain_chance": "Rage: On Hurt Chance",
+  "effect.winter_custom_attributes.rage_duration": "Rage: Duration",
+  "effect.winter_custom_attributes.fortify_onhurt_gain_chance": "Fortify: On Hurt Chance",
+  "effect.winter_custom_attributes.fortify_onblock_gain_chance": "Fortify: On Shield-Block Chance",
+  "effect.winter_custom_attributes.fortify_duration": "Fortify: Duration",
+  "effect.winter_custom_attributes.fortify_armor": "Fortify: Armor",
+  "effect.winter_custom_attributes.fortify_toughness": "Fortify: Toughness",
+  "effect.winter_custom_attributes.fortify_absorption": "Fortify: Absorption",
+  "effect.winter_custom_attributes.meele_crit_chance": "Meele Critical Hit Chance",
+  "effect.winter_custom_attributes.meele_crit_damage": "Meele Critical Hit Damage Modifier",
+  "effect.winter_custom_attributes.ranged_crit_chance": "Ranged Critical Hit Chance",
+  "effect.winter_custom_attributes.ranged_crit_damage": "Ranged Critical Hit Damage Modifier",
+  "effect.winter_custom_attributes.slow_strength": "Slow: Strength of Slow Effect",
+  "effect.winter_custom_attributes.slow_duration": "Slow: Duration",
+  "effect.winter_custom_attributes.slow_meele_inflict_chance": "Slow: Ranged Inflict Chance",
+  "effect.winter_custom_attributes.slow_ranged_inflict_chance": "Slow: Meele Inflict Chance"
 
-  "effect.winter_custom_attributes.rage": "Rage"
 }
