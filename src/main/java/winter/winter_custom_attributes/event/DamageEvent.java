@@ -81,12 +81,30 @@ public class DamageEvent {
             if(attacker.getRandom().nextDouble() < getSafeAttributeValue(attacker, AttributesRegistry.rage_meele_gain_chance)) {
                 attacker.addEffect(new MobEffectInstance(ModEffects.RAGE_EFFECT, (int)getSafeAttributeValue(attacker,AttributesRegistry.rage_duration), 1, false, true, true));
             }
+            if(attacker.getRandom().nextDouble() < getSafeAttributeValue(attacker, AttributesRegistry.tactic_hitrun_meele_gain_chance)) {
+                attacker.addEffect(new MobEffectInstance(ModEffects.TACTIC_HITRUN_EFFECT, (int)getSafeAttributeValue(attacker,AttributesRegistry.tactic_hitrun_duration), 1, false, true, true));
+            }
+            if(attacker.getRandom().nextDouble() < getSafeAttributeValue(attacker, AttributesRegistry.tactic_assault_meele_gain_chance)) {
+                attacker.addEffect(new MobEffectInstance(ModEffects.TACTIC_ASSAULT_EFFECT, (int)getSafeAttributeValue(attacker,AttributesRegistry.tactic_assault_duration), 1, false, true, true));
+            }
+            if(attacker.getRandom().nextDouble() < getSafeAttributeValue(attacker, AttributesRegistry.tactic_overwhelm_meele_gain_chance)) {
+                attacker.addEffect(new MobEffectInstance(ModEffects.TACTIC_OVERWHELM_EFFECT, (int)getSafeAttributeValue(attacker,AttributesRegistry.tactic_overwhelm_duration), 1, false, true, true));
+            }
         }
 
         // Ranged
         if(rangeType == RangeType.RANGED) {
             if(attacker.getRandom().nextDouble() < getSafeAttributeValue(attacker, AttributesRegistry.rage_ranged_gain_chance)) {
                 attacker.addEffect(new MobEffectInstance(ModEffects.RAGE_EFFECT, (int)getSafeAttributeValue(attacker,AttributesRegistry.rage_duration), 1, false, true, true));
+            }
+            if(attacker.getRandom().nextDouble() < getSafeAttributeValue(attacker, AttributesRegistry.tactic_hitrun_ranged_gain_chance)) {
+                attacker.addEffect(new MobEffectInstance(ModEffects.TACTIC_HITRUN_EFFECT, (int)getSafeAttributeValue(attacker,AttributesRegistry.tactic_hitrun_duration), 1, false, true, true));
+            }
+            if(attacker.getRandom().nextDouble() < getSafeAttributeValue(attacker, AttributesRegistry.tactic_assault_ranged_gain_chance)) {
+                attacker.addEffect(new MobEffectInstance(ModEffects.TACTIC_ASSAULT_EFFECT, (int)getSafeAttributeValue(attacker,AttributesRegistry.tactic_assault_duration), 1, false, true, true));
+            }
+            if(attacker.getRandom().nextDouble() < getSafeAttributeValue(attacker, AttributesRegistry.tactic_overwhelm_ranged_gain_chance)) {
+                attacker.addEffect(new MobEffectInstance(ModEffects.TACTIC_OVERWHELM_EFFECT, (int)getSafeAttributeValue(attacker,AttributesRegistry.tactic_overwhelm_duration), 1, false, true, true));
             }
         }
     }

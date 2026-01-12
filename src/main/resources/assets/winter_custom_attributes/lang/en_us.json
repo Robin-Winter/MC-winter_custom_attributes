@@ -26,6 +26,9 @@
   "attributes.winter_custom_attributes.slow_ranged_inflict_chance": "Slow: Meele Inflict Chance",
 
   "effect.winter_custom_attributes.rage": "Rage",
-  "effect.winter_custom_attributes.fortify": "Fortified"
+  "effect.winter_custom_attributes.fortify": "Fortified",
+  "effect.winter_custom_attributes.tactic_hitrun": "Tactic: Hit and Run",
+  "effect.winter_custom_attributes.tactic_assault": "Tactic: Assault",
+  "effect.winter_custom_attributes.tactic_overwhelm": "Tactic: Overwhelm"
 
 }
