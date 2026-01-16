@@ -21,11 +21,14 @@ public class ModEffects {
             () -> new FortifyEffect(MobEffectCategory.BENEFICIAL, 0x0000FF));
 
     public static final Holder<MobEffect> TACTIC_HITRUN_EFFECT = MOB_EFFECTS.register("tactic_hitrun",
-            () -> new FortifyEffect(MobEffectCategory.BENEFICIAL, 0x0000FF));
+            () -> new TacticHitRunEffect(MobEffectCategory.BENEFICIAL, 0x0000FF));
     public static final Holder<MobEffect> TACTIC_ASSAULT_EFFECT = MOB_EFFECTS.register("tactic_assault",
-            () -> new FortifyEffect(MobEffectCategory.BENEFICIAL, 0x0000FF));
+            () -> new TacticAssaultEffect(MobEffectCategory.BENEFICIAL, 0x0000FF));
     public static final Holder<MobEffect> TACTIC_OVERWHELM_EFFECT = MOB_EFFECTS.register("tactic_overwhelm",
-            () -> new FortifyEffect(MobEffectCategory.BENEFICIAL, 0x0000FF));
+            () -> new TacticOverwhelmEffect(MobEffectCategory.BENEFICIAL, 0x0000FF));
+
+    public static final Holder<MobEffect> EXPERTISE_EFFECT = MOB_EFFECTS.register("expertise",
+            () -> new TacticOverwhelmEffect(MobEffectCategory.BENEFICIAL, 0x0000FF));
 
     public static void register(IEventBus eventBus) {
         MOB_EFFECTS.register(eventBus);

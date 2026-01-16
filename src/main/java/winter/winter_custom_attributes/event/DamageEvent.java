@@ -21,7 +21,7 @@ import winter.winter_custom_attributes.effect.ModEffects;
 import winter.winter_custom_attributes.enums.RangeType;
 
 @EventBusSubscriber(modid = WinterCustomAttributes.MODID)
-public class DamageEvent {
+public class DamageEvent extends EventUtils {
 
     @SubscribeEvent
     public  static void onLivingIncomingDamageEvent(LivingIncomingDamageEvent event) {
@@ -45,13 +45,13 @@ public class DamageEvent {
 
             // Checking for Crits
             if(rangeType != RangeType.UNKNOWN) {
-                double critChance = rangeType == RangeType.MEELE ? livingSource.getAttributeValue(AttributesRegistry.meele_crit_chance) : rangeType == RangeType.RANGED ? livingSource.getAttributeValue(AttributesRegistry.ranged_crit_chance) : 0;
+                double critChance = rangeType == RangeType.MEELE ? getSafeAttributeValue(livingSource,AttributesRegistry.meele_crit_chance) : rangeType == RangeType.RANGED ? getSafeAttributeValue(livingSource,AttributesRegistry.ranged_crit_chance) : 0;
                 if (livingSource.getRandom().nextDouble() < critChance) {
                     if (rangeType == RangeType.MEELE) {
-                        event.setAmount((float) (event.getAmount() * Math.max(1, livingSource.getAttributeValue(AttributesRegistry.meele_crit_damage))));
+                        event.setAmount((float) (event.getAmount() * Math.max(1, getSafeAttributeValue(livingSource,AttributesRegistry.meele_crit_damage))));
                         livingSource.level().playSound(null, livingSource.getX(), livingSource.getY(), livingSource.getZ(), SoundEvents.PLAYER_ATTACK_CRIT, livingSource.getSoundSource(), 1.0F, 1.0F);
                     } else if (rangeType == RangeType.RANGED) {
-                        event.setAmount((float) (event.getAmount() * Math.max(1, livingSource.getAttributeValue(AttributesRegistry.ranged_crit_damage))));
+                        event.setAmount((float) (event.getAmount() * Math.max(1, getSafeAttributeValue(livingSource,AttributesRegistry.ranged_crit_damage))));
                         livingSource.level().playSound(null, livingSource.getX(), livingSource.getY(), livingSource.getZ(), SoundEvents.PLAYER_ATTACK_CRIT, livingSource.getSoundSource(), 1.0F, 1.0F);
                     }
                 }
@@ -65,12 +65,24 @@ public class DamageEvent {
             if(attacker.getRandom().nextDouble() < getSafeAttributeValue(attacker, AttributesRegistry.slow_meele_inflict_chance)) {
                 defender.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, (int)getSafeAttributeValue(defender,AttributesRegistry.slow_duration), (int)getSafeAttributeValue(defender,AttributesRegistry.slow_strength), false, true, true));
             }
+            if(attacker.getRandom().nextDouble() < getSafeAttributeValue(attacker, AttributesRegistry.poison_meele_inflict_chance)) {
+                defender.addEffect(new MobEffectInstance(MobEffects.POISON, (int)getSafeAttributeValue(defender,AttributesRegistry.poison_duration), (int)getSafeAttributeValue(defender,AttributesRegistry.poison_strength), false, true, true));
+            }
+            if(attacker.getRandom().nextDouble() < getSafeAttributeValue(attacker, AttributesRegistry.burn_meele_inflict_chance)) {
+                defender.setRemainingFireTicks(160);
+            }
         }
 
         // Ranged
         if(rangeType == RangeType.RANGED) {
             if(attacker.getRandom().nextDouble() < getSafeAttributeValue(attacker, AttributesRegistry.slow_ranged_inflict_chance)) {
                 defender.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, (int)getSafeAttributeValue(defender,AttributesRegistry.slow_duration), (int)getSafeAttributeValue(defender,AttributesRegistry.slow_strength), false, true, true));
+            }
+            if(attacker.getRandom().nextDouble() < getSafeAttributeValue(attacker, AttributesRegistry.poison_ranged_inflict_chance)) {
+                defender.addEffect(new MobEffectInstance(MobEffects.POISON, (int)getSafeAttributeValue(defender,AttributesRegistry.poison_duration), (int)getSafeAttributeValue(defender,AttributesRegistry.poison_strength), false, true, true));
+            }
+            if(attacker.getRandom().nextDouble() < getSafeAttributeValue(attacker, AttributesRegistry.burn_ranged_inflict_chance)) {
+                defender.setRemainingFireTicks(160);
             }
         }
     }
@@ -122,23 +134,16 @@ public class DamageEvent {
         }
     }
 
-    protected static double getSafeAttributeValue(LivingEntity entity, Holder<Attribute> attribute) {
-        AttributeInstance inst = entity.getAttribute(attribute);
-        if(inst != null) {
-            return inst.getValue();
-        } else {
-            return 0;
-        }
-    }
+
 
     @SubscribeEvent
     public static void onLivingShieldBlock(LivingShieldBlockEvent event) {
         if(event.getOriginalBlock()) {
-            double fortifyChance = event.getEntity().getAttributeValue(AttributesRegistry.fortify_onblock_gain_chance);
+            double fortifyChance = getSafeAttributeValue(event.getEntity(), AttributesRegistry.fortify_onblock_gain_chance);
 
             if(event.getEntity().getRandom().nextDouble() < fortifyChance) {
                 // Fortify will be applied
-                event.getEntity().addEffect(new MobEffectInstance(ModEffects.FORTIFY_EFFECT, (int)event.getEntity().getAttributeValue(AttributesRegistry.fortify_duration), 1, false, true, true));
+                event.getEntity().addEffect(new MobEffectInstance(ModEffects.FORTIFY_EFFECT, (int)getSafeAttributeValue(event.getEntity(),AttributesRegistry.fortify_duration), 1, false, true, true));
             }
         }
     }

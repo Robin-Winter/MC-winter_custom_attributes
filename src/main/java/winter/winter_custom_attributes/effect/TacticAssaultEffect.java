@@ -5,13 +5,12 @@ import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
-import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.puffish.attributesmod.api.PuffishAttributes;
 import winter.winter_custom_attributes.attributes.AttributesRegistry;
 
-public class TacticAssault extends MobEffect {
+public class TacticAssaultEffect extends MobEffect {
 
-    protected TacticAssault(MobEffectCategory category, int color) {
+    protected TacticAssaultEffect(MobEffectCategory category, int color) {
         super(category, color);
     }
 
