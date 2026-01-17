@@ -32,13 +32,13 @@ public class EntityTickEvent extends EventUtils {
                     // Check biome type if we can see the sky
                     for(TagKey<Biome> b : ExpertiseEffect.getViableBiomes(livingEntity)) {
                         if(livingEntity.level().getBiome(livingEntity.blockPosition()).is(b)) {
-                            livingEntity.addEffect(new MobEffectInstance(ModEffects.EXPERTISE_EFFECT, (int)getSafeAttributeValue(livingEntity,AttributesRegistry.expertise_duration), 1, false, false, true));
+                            livingEntity.addEffect(new MobEffectInstance(ModEffects.EXPERTISE_EFFECT, (int)getSafeAttributeValue(livingEntity,AttributesRegistry.expertise_duration), 0, false, false, true));
                             break;
                         }
                     }
                 } else if(livingEntity.level().dimension() == Level.OVERWORLD && livingEntity.blockPosition().getY() <= 32 && getSafeAttributeValue(livingEntity, AttributesRegistry.expertise_in_depths) == 1) {
                     // if we cant see the sky, we need to be deep and in the overworld
-                    livingEntity.addEffect(new MobEffectInstance(ModEffects.EXPERTISE_EFFECT, (int)getSafeAttributeValue(livingEntity,AttributesRegistry.expertise_duration), 1, false, false, true));
+                    livingEntity.addEffect(new MobEffectInstance(ModEffects.EXPERTISE_EFFECT, (int)getSafeAttributeValue(livingEntity,AttributesRegistry.expertise_duration), 0, false, false, true));
                 }
             }
         }

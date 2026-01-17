@@ -66,8 +66,8 @@ public class ExpertiseEffect extends MobEffect {
         if(EventUtils.getSafeAttributeValue(livingEntity, AttributesRegistry.expertise_in_badlands) == 1) {
             biomes.add(Tags.Biomes.IS_BADLANDS);
         }
-        if(EventUtils.getSafeAttributeValue(livingEntity, AttributesRegistry.expertise_in_ocean) == 1) {
-            biomes.add(Tags.Biomes.IS_OCEAN);
+        if(EventUtils.getSafeAttributeValue(livingEntity, AttributesRegistry.expertise_in_coast) == 1) {
+            biomes.add(Tags.Biomes.IS_STONY_SHORES);
             biomes.add(Tags.Biomes.IS_BEACH);
         }
         if(EventUtils.getSafeAttributeValue(livingEntity, AttributesRegistry.expertise_in_forest) == 1) {

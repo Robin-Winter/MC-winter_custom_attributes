@@ -28,7 +28,7 @@ public class ModEffects {
             () -> new TacticOverwhelmEffect(MobEffectCategory.BENEFICIAL, 0x0000FF));
 
     public static final Holder<MobEffect> EXPERTISE_EFFECT = MOB_EFFECTS.register("expertise",
-            () -> new TacticOverwhelmEffect(MobEffectCategory.BENEFICIAL, 0x0000FF));
+            () -> new ExpertiseEffect(MobEffectCategory.BENEFICIAL, 0x0000FF));
 
     public static void register(IEventBus eventBus) {
         MOB_EFFECTS.register(eventBus);

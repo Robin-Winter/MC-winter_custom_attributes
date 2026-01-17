@@ -91,32 +91,32 @@ public class DamageEvent extends EventUtils {
         // Meele
         if(rangeType == RangeType.MEELE) {
             if(attacker.getRandom().nextDouble() < getSafeAttributeValue(attacker, AttributesRegistry.rage_meele_gain_chance)) {
-                attacker.addEffect(new MobEffectInstance(ModEffects.RAGE_EFFECT, (int)getSafeAttributeValue(attacker,AttributesRegistry.rage_duration), 1, false, true, true));
+                attacker.addEffect(new MobEffectInstance(ModEffects.RAGE_EFFECT, (int)getSafeAttributeValue(attacker,AttributesRegistry.rage_duration), 0, false, true, true));
             }
             if(attacker.getRandom().nextDouble() < getSafeAttributeValue(attacker, AttributesRegistry.tactic_hitrun_meele_gain_chance)) {
-                attacker.addEffect(new MobEffectInstance(ModEffects.TACTIC_HITRUN_EFFECT, (int)getSafeAttributeValue(attacker,AttributesRegistry.tactic_hitrun_duration), 1, false, true, true));
+                attacker.addEffect(new MobEffectInstance(ModEffects.TACTIC_HITRUN_EFFECT, (int)getSafeAttributeValue(attacker,AttributesRegistry.tactic_hitrun_duration), 0, false, true, true));
             }
             if(attacker.getRandom().nextDouble() < getSafeAttributeValue(attacker, AttributesRegistry.tactic_assault_meele_gain_chance)) {
-                attacker.addEffect(new MobEffectInstance(ModEffects.TACTIC_ASSAULT_EFFECT, (int)getSafeAttributeValue(attacker,AttributesRegistry.tactic_assault_duration), 1, false, true, true));
+                attacker.addEffect(new MobEffectInstance(ModEffects.TACTIC_ASSAULT_EFFECT, (int)getSafeAttributeValue(attacker,AttributesRegistry.tactic_assault_duration), 0, false, true, true));
             }
             if(attacker.getRandom().nextDouble() < getSafeAttributeValue(attacker, AttributesRegistry.tactic_overwhelm_meele_gain_chance)) {
-                attacker.addEffect(new MobEffectInstance(ModEffects.TACTIC_OVERWHELM_EFFECT, (int)getSafeAttributeValue(attacker,AttributesRegistry.tactic_overwhelm_duration), 1, false, true, true));
+                attacker.addEffect(new MobEffectInstance(ModEffects.TACTIC_OVERWHELM_EFFECT, (int)getSafeAttributeValue(attacker,AttributesRegistry.tactic_overwhelm_duration), 0, false, true, true));
             }
         }
 
         // Ranged
         if(rangeType == RangeType.RANGED) {
             if(attacker.getRandom().nextDouble() < getSafeAttributeValue(attacker, AttributesRegistry.rage_ranged_gain_chance)) {
-                attacker.addEffect(new MobEffectInstance(ModEffects.RAGE_EFFECT, (int)getSafeAttributeValue(attacker,AttributesRegistry.rage_duration), 1, false, true, true));
+                attacker.addEffect(new MobEffectInstance(ModEffects.RAGE_EFFECT, (int)getSafeAttributeValue(attacker,AttributesRegistry.rage_duration), 0, false, true, true));
             }
             if(attacker.getRandom().nextDouble() < getSafeAttributeValue(attacker, AttributesRegistry.tactic_hitrun_ranged_gain_chance)) {
-                attacker.addEffect(new MobEffectInstance(ModEffects.TACTIC_HITRUN_EFFECT, (int)getSafeAttributeValue(attacker,AttributesRegistry.tactic_hitrun_duration), 1, false, true, true));
+                attacker.addEffect(new MobEffectInstance(ModEffects.TACTIC_HITRUN_EFFECT, (int)getSafeAttributeValue(attacker,AttributesRegistry.tactic_hitrun_duration), 0, false, true, true));
             }
             if(attacker.getRandom().nextDouble() < getSafeAttributeValue(attacker, AttributesRegistry.tactic_assault_ranged_gain_chance)) {
-                attacker.addEffect(new MobEffectInstance(ModEffects.TACTIC_ASSAULT_EFFECT, (int)getSafeAttributeValue(attacker,AttributesRegistry.tactic_assault_duration), 1, false, true, true));
+                attacker.addEffect(new MobEffectInstance(ModEffects.TACTIC_ASSAULT_EFFECT, (int)getSafeAttributeValue(attacker,AttributesRegistry.tactic_assault_duration), 0, false, true, true));
             }
             if(attacker.getRandom().nextDouble() < getSafeAttributeValue(attacker, AttributesRegistry.tactic_overwhelm_ranged_gain_chance)) {
-                attacker.addEffect(new MobEffectInstance(ModEffects.TACTIC_OVERWHELM_EFFECT, (int)getSafeAttributeValue(attacker,AttributesRegistry.tactic_overwhelm_duration), 1, false, true, true));
+                attacker.addEffect(new MobEffectInstance(ModEffects.TACTIC_OVERWHELM_EFFECT, (int)getSafeAttributeValue(attacker,AttributesRegistry.tactic_overwhelm_duration), 0, false, true, true));
             }
         }
     }
@@ -127,10 +127,10 @@ public class DamageEvent extends EventUtils {
 
     protected static void applyOnHurtGainEffects(LivingEntity attacker, LivingEntity defender, RangeType rangeType) {
         if(defender.getRandom().nextDouble() < getSafeAttributeValue(defender,AttributesRegistry.fortify_onhurt_gain_chance)) {
-            defender.addEffect(new MobEffectInstance(ModEffects.FORTIFY_EFFECT, (int)getSafeAttributeValue(defender,AttributesRegistry.fortify_duration), 1, false, true, true));
+            defender.addEffect(new MobEffectInstance(ModEffects.FORTIFY_EFFECT, (int)getSafeAttributeValue(defender,AttributesRegistry.fortify_duration), 0, false, true, true));
         }
         if(defender.getRandom().nextDouble() < getSafeAttributeValue(defender,AttributesRegistry.rage_onhurt_gain_chance)) {
-            defender.addEffect(new MobEffectInstance(ModEffects.RAGE_EFFECT, (int)getSafeAttributeValue(defender,AttributesRegistry.rage_duration), 1, false, true, true));
+            defender.addEffect(new MobEffectInstance(ModEffects.RAGE_EFFECT, (int)getSafeAttributeValue(defender,AttributesRegistry.rage_duration), 0, false, true, true));
         }
     }
 
@@ -143,7 +143,7 @@ public class DamageEvent extends EventUtils {
 
             if(event.getEntity().getRandom().nextDouble() < fortifyChance) {
                 // Fortify will be applied
-                event.getEntity().addEffect(new MobEffectInstance(ModEffects.FORTIFY_EFFECT, (int)getSafeAttributeValue(event.getEntity(),AttributesRegistry.fortify_duration), 1, false, true, true));
+                event.getEntity().addEffect(new MobEffectInstance(ModEffects.FORTIFY_EFFECT, (int)getSafeAttributeValue(event.getEntity(),AttributesRegistry.fortify_duration), 0, false, true, true));
             }
         }
     }
