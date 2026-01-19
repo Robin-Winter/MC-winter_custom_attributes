@@ -1,22 +1,16 @@
 package winter.winter_custom_attributes.event;
 
-import net.minecraft.core.HolderSet;
-import net.minecraft.core.Registry;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.biome.Biome;
-import net.minecraft.world.level.dimension.DimensionType;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
-import net.neoforged.neoforge.common.Tags;
 import winter.winter_custom_attributes.WinterCustomAttributes;
 import winter.winter_custom_attributes.attributes.AttributesRegistry;
 import winter.winter_custom_attributes.effect.ExpertiseEffect;
 import winter.winter_custom_attributes.effect.ModEffects;
-
-import java.util.List;
 
 @EventBusSubscriber(modid = WinterCustomAttributes.MODID)
 public class EntityTickEvent extends EventUtils {
@@ -24,9 +18,10 @@ public class EntityTickEvent extends EventUtils {
     @SubscribeEvent
     public static void onTickEvent(net.neoforged.neoforge.event.tick.EntityTickEvent.Post event) {
         // Check once per second
-        if(event.getEntity().tickCount % 20 == 0) {
-            if(event.getEntity() instanceof LivingEntity livingEntity) {
+        if(event.getEntity().tickCount % 20 == 0 && event.getEntity() instanceof LivingEntity livingEntity) {
 
+            // Expertise Check
+            if(isRelevantEntity(livingEntity) && hasExpertiseEnabled(livingEntity)) {
                 // Check for Biome expertise
                 if(livingEntity.level().canSeeSky(livingEntity.blockPosition())) {
                     // Check biome type if we can see the sky

@@ -8,6 +8,10 @@ import net.minecraft.world.entity.ai.attributes.RangedAttribute;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import winter.winter_custom_attributes.WinterCustomAttributes;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 public class AttributesRegistry {
 
     public static final DeferredRegister<Attribute> ATTRIBUTES = DeferredRegister.create(BuiltInRegistries.ATTRIBUTE, WinterCustomAttributes.MODID);
@@ -89,6 +93,8 @@ public class AttributesRegistry {
     public static final Holder<Attribute> expertise_armor = registerNewAttribute("expertise_armor", 2, -1024, 1024);
     public static final Holder<Attribute> expertise_natural_regeneration = registerNewAttribute("expertise_natural_regeneration", 0, -1024, 1024);
     public static final Holder<Attribute> expertise_stealth = registerNewAttribute("expertise_stealth", 0, -1024, 1024);
+
+    public static final List<Holder<Attribute>> expertiseSkills = new ArrayList<>(Arrays.asList(expertise_in_jungle, expertise_in_badlands, expertise_in_coast, expertise_in_desert, expertise_in_depths, expertise_in_forest, expertise_in_mountain, expertise_in_taiga));
 
     public static Holder<Attribute> registerNewAttribute(String name, double defaultValue, double minValue, double maxValue) {
         return ATTRIBUTES.register(name, () -> new RangedAttribute("attributes." + WinterCustomAttributes.MODID + "." + name,  defaultValue, minValue, maxValue));
