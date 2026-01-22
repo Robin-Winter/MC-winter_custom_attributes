@@ -15,6 +15,7 @@ import java.util.List;
 public class AttributesRegistry {
 
     public static final DeferredRegister<Attribute> ATTRIBUTES = DeferredRegister.create(BuiltInRegistries.ATTRIBUTE, WinterCustomAttributes.MODID);
+    public static final Holder<Attribute> generic_xp_drop_on_death_mult = registerNewAttribute("generic_xp_drop_on_death_mult", 1, 0, 10);
     public static final Holder<Attribute> meele_crit_chance = registerNewAttribute("meele_crit_chance", 0, -1, 1);
     public static final Holder<Attribute> meele_crit_damage = registerNewAttribute("meele_crit_damage", 1, -10, 10);
     public static final Holder<Attribute> ranged_crit_chance = registerNewAttribute("ranged_crit_chance", 0, -1, 1);

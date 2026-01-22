@@ -16,11 +16,14 @@ import winter.winter_custom_attributes.attributes.AttributesRegistry;
 
 public class EventUtils {
     public static double getSafeAttributeValue(LivingEntity entity, Holder<Attribute> attribute) {
+        return getSafeAttributeValue(entity, attribute, 0);
+    }
+    public static double getSafeAttributeValue(LivingEntity entity, Holder<Attribute> attribute, double nullValue) {
         AttributeInstance inst = entity.getAttribute(attribute);
         if(inst != null) {
             return inst.getValue();
         } else {
-            return 0;
+            return nullValue;
         }
     }
     public static boolean hasExpertiseEnabled(LivingEntity entity) {
