@@ -120,7 +120,6 @@ configurations {
 dependencies {
 
     // This is required to add the library at compile time
-    implementation "net.puffish:skillsmod:0.17.1+1.21:neoforge"
     implementation "net.puffish:attributesmod:0.8.0+1.21:neoforge"
 
     // This adds the library to all the runs

@@ -27,9 +27,14 @@
 
   "effect.winter_custom_attributes.rage": "Rage",
   "effect.winter_custom_attributes.fortify": "Fortified",
+  "effect.winter_custom_attributes.fortify.description": "Increases Armor and Toughness temporarily.",
   "effect.winter_custom_attributes.tactic_hitrun": "Tactic: Hit and Run",
+  "effect.winter_custom_attributes.tactic_hitrun.description": "Gained as On Hit Effect and improves attacks.",
   "effect.winter_custom_attributes.tactic_assault": "Tactic: Assault",
+  "effect.winter_custom_attributes.tactic_assault.description": "Gained as On Hit Effect and improves attacks.",
   "effect.winter_custom_attributes.tactic_overwhelm": "Tactic: Overwhelm",
-  "effect.winter_custom_attributes.expertise": "Expertise"
+  "effect.winter_custom_attributes.tactic_overwhelm.description": "Gained as On Hit Effect and improves attacks.",
+  "effect.winter_custom_attributes.expertise": "Expertise",
+  "effect.winter_custom_attributes.expertise.description": "Gives bonus while being in certain biomes."
 
 }
