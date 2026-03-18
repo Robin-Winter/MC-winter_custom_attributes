@@ -22,16 +22,6 @@ public class AttributesRegistry {
     public static final Holder<Attribute> ranged_crit_damage = registerNewAttribute("ranged_crit_damage", 1, -10, 10);
     public static final Holder<Attribute> armor_durability = registerNewAttribute("armor_durability", 1, 0, 10);
     public static final Holder<Attribute> weapon_durability = registerNewAttribute("weapon_durability", 1, 0, 10);
-    public static final Holder<Attribute> rage_meele_gain_chance = registerNewAttribute("rage_meele_gain_chance", 0, -1, 1);
-    public static final Holder<Attribute> rage_ranged_gain_chance = registerNewAttribute("rage_ranged_gain_chance", 0, -1, 1);
-    public static final Holder<Attribute> rage_onhurt_gain_chance = registerNewAttribute("rage_onhurt_gain_chance", 0, -1, 1);
-    public static final Holder<Attribute> rage_duration = registerNewAttribute("rage_duration", 60, 0, 32768);
-    public static final Holder<Attribute> fortify_onhurt_gain_chance = registerNewAttribute("fortify_onhurt_gain_chance", 0, -1, 1);
-    public static final Holder<Attribute> fortify_onblock_gain_chance = registerNewAttribute("fortify_onblock_gain_chance", 0, -1, 1);
-    public static final Holder<Attribute> fortify_duration = registerNewAttribute("fortify_duration", 60, 0, 32768);
-    public static final Holder<Attribute> fortify_armor = registerNewAttribute("fortify_armor", 0, 0, 1024);
-    public static final Holder<Attribute> fortify_toughness = registerNewAttribute("fortify_toughness", 0, 0, 1024);
-    public static final Holder<Attribute> fortify_absorption = registerNewAttribute("fortify_absorption", 0, 0, 1024);
     public static final Holder<Attribute> poison_strength = registerNewAttribute("poison_strength", 0, 0, 10);
     public static final Holder<Attribute> poison_duration = registerNewAttribute("poison_duration", 60, 0, 1024);
     public static final Holder<Attribute> poison_meele_inflict_chance = registerNewAttribute("poison_meele_inflict_chance", 0, -1, 1);
@@ -42,6 +32,20 @@ public class AttributesRegistry {
     public static final Holder<Attribute> slow_duration = registerNewAttribute("slow_duration", 60, 0, 1024);
     public static final Holder<Attribute> slow_meele_inflict_chance = registerNewAttribute("slow_meele_inflict_chance", 0, -1, 1);
     public static final Holder<Attribute> slow_ranged_inflict_chance = registerNewAttribute("slow_ranged_inflict_chance", 0, -1, 1);
+    public static final Holder<Attribute> blind_duration = registerNewAttribute("blind_duration", 60, 0, 1024);
+    public static final Holder<Attribute> blind_meele_inflict_chance = registerNewAttribute("blind_meele_inflict_chance", 0, -1, 1);
+    public static final Holder<Attribute> blind_ranged_inflict_chance = registerNewAttribute("blind_ranged_inflict_chance", 0, -1, 1);
+
+    public static final Holder<Attribute> rage_meele_gain_chance = registerNewAttribute("rage_meele_gain_chance", 0, -1, 1);
+    public static final Holder<Attribute> rage_ranged_gain_chance = registerNewAttribute("rage_ranged_gain_chance", 0, -1, 1);
+    public static final Holder<Attribute> rage_onhurt_gain_chance = registerNewAttribute("rage_onhurt_gain_chance", 0, -1, 1);
+    public static final Holder<Attribute> rage_duration = registerNewAttribute("rage_duration", 60, 0, 32768);
+    public static final Holder<Attribute> fortify_onhurt_gain_chance = registerNewAttribute("fortify_onhurt_gain_chance", 0, -1, 1);
+    public static final Holder<Attribute> fortify_onblock_gain_chance = registerNewAttribute("fortify_onblock_gain_chance", 0, -1, 1);
+    public static final Holder<Attribute> fortify_duration = registerNewAttribute("fortify_duration", 60, 0, 32768);
+    public static final Holder<Attribute> fortify_armor = registerNewAttribute("fortify_armor", 0, 0, 1024);
+    public static final Holder<Attribute> fortify_toughness = registerNewAttribute("fortify_toughness", 0, 0, 1024);
+    public static final Holder<Attribute> fortify_absorption = registerNewAttribute("fortify_absorption", 0, 0, 1024);
     public static final Holder<Attribute> tactic_hitrun_meele_gain_chance = registerNewAttribute("tactic_hitrun_meele_gain_chance", 0, -1, 1);
     public static final Holder<Attribute> tactic_hitrun_ranged_gain_chance = registerNewAttribute("tactic_hitrun_ranged_gain_chance", 0, -1, 1);
     public static final Holder<Attribute> tactic_hitrun_duration = registerNewAttribute("tactic_hitrun_duration", 120, 0, 32768);

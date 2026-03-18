@@ -71,6 +71,9 @@ public class DamageEvent extends EventUtils {
             if(attacker.getRandom().nextDouble() < getSafeAttributeValue(attacker, AttributesRegistry.burn_meele_inflict_chance)) {
                 defender.setRemainingFireTicks(160);
             }
+            if(attacker.getRandom().nextDouble() < getSafeAttributeValue(attacker, AttributesRegistry.blind_meele_inflict_chance)) {
+                defender.addEffect(new MobEffectInstance(MobEffects.BLINDNESS, (int)getSafeAttributeValue(defender,AttributesRegistry.blind_duration), 0, false, true, true));
+            }
         }
 
         // Ranged
@@ -83,6 +86,9 @@ public class DamageEvent extends EventUtils {
             }
             if(attacker.getRandom().nextDouble() < getSafeAttributeValue(attacker, AttributesRegistry.burn_ranged_inflict_chance)) {
                 defender.setRemainingFireTicks(160);
+            }
+            if(attacker.getRandom().nextDouble() < getSafeAttributeValue(attacker, AttributesRegistry.blind_ranged_inflict_chance)) {
+                defender.addEffect(new MobEffectInstance(MobEffects.BLINDNESS, (int)getSafeAttributeValue(defender,AttributesRegistry.blind_duration), 0, false, true, true));
             }
         }
     }

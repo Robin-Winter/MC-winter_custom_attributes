@@ -35,6 +35,9 @@
   "effect.winter_custom_attributes.tactic_overwhelm": "Tactic: Overwhelm",
   "effect.winter_custom_attributes.tactic_overwhelm.description": "Gained as On Hit Effect and improves attacks.",
   "effect.winter_custom_attributes.expertise": "Expertise",
-  "effect.winter_custom_attributes.expertise.description": "Gives bonus while being in certain biomes."
-
+  "effect.winter_custom_attributes.expertise.description": "Gives bonus while being in certain biomes.",
+  "effect.winter_custom_attributes.scorching": "Scorching",
+  "effect.winter_custom_attributes.scorching.description": "The scorching heat slows you down and increases your food consumption. Stay in the Dark!",
+  "effect.winter_custom_attributes.freezing": "Freezing",
+  "effect.winter_custom_attributes.freezing.description": "The freezing environment increases your food consumption and slowly freezes you. Seek shelter!"
 }

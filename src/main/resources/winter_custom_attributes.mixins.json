@@ -3,12 +3,12 @@
   "package": "winter.winter_custom_attributes.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
+    "IBlockExtensionMixin",
     "ItemMixin",
-    "PlayerMixin",
-    "LivingEntityMixin"
+    "LivingEntityMixin",
+    "PlayerMixin"
   ],
   "client": [
-
   ],
   "injectors": {
     "defaultRequire": 1

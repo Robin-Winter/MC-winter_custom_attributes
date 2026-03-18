@@ -30,6 +30,12 @@ public class ModEffects {
     public static final Holder<MobEffect> EXPERTISE_EFFECT = MOB_EFFECTS.register("expertise",
             () -> new ExpertiseEffect(MobEffectCategory.BENEFICIAL, 0x0000FF));
 
+    public static final Holder<MobEffect> SCORCHING_EFFECT = MOB_EFFECTS.register("scorching",
+            () -> new ScorchingEffect(MobEffectCategory.HARMFUL, 0xFF0000));
+
+    public static final Holder<MobEffect> FREEZING_EFFECT = MOB_EFFECTS.register("freezing",
+            () -> new FreezingEffect(MobEffectCategory.HARMFUL, 0x0000FF));
+
     public static void register(IEventBus eventBus) {
         MOB_EFFECTS.register(eventBus);
     }
