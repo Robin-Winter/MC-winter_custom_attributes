@@ -2,6 +2,8 @@ package winter.winter_custom_attributes;
 
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.neoforged.neoforge.common.ModConfigSpec;
 
 import java.util.List;
@@ -27,5 +29,12 @@ public class Config {
             .comment("Amplifier for the effects of the freezing effect.")
             .defineInRange("freezingEffect_Amplifier", 0, 0, Integer.MAX_VALUE);
 
+    public static final ModConfigSpec.ConfigValue<String> NETHER_PORTAL_BLOCK_VALUE = BUILDER
+            .comment("Which block needs to be used for nether portals.")
+            .define("nether_portal_block", "minecraft:obsidian");
+
+    public static Block getNetherPortalBlock() {
+        return BuiltInRegistries.BLOCK.get(ResourceLocation.tryParse(NETHER_PORTAL_BLOCK_VALUE.get()));
+    }
     static final ModConfigSpec SPEC = BUILDER.build();
 }

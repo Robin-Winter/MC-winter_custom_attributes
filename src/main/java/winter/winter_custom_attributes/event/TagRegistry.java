@@ -11,7 +11,6 @@ import net.minecraft.world.level.biome.Biomes;
 import net.minecraft.world.level.block.Block;
 
 public class TagRegistry {
-    public static final TagKey<Block> nether_portal_block = TagKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("winter_custom_attributes", "nether_portal_block"));
     public static final TagKey<Biome> biome_env_scorching = TagKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath("winter_custom_attributes", "env_scorching"));
     public static final TagKey<Biome> biome_env_freezing = TagKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath("winter_custom_attributes", "env_freezing"));
 }

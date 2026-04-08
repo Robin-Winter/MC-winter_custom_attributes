@@ -3,6 +3,7 @@
   "package": "winter.winter_custom_attributes.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
+    "PortalForcerMixin",
     "IBlockExtensionMixin",
     "ItemMixin",
     "LivingEntityMixin",
