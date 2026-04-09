@@ -33,6 +33,10 @@ public class Config {
             .comment("Which block needs to be used for nether portals.")
             .define("nether_portal_block", "minecraft:obsidian");
 
+    public static final ModConfigSpec.BooleanValue NETHER_PORTAL_GENERATE_TWIN = BUILDER
+            .comment("If set to false, going through a nether portal will not generate one on the other side. People could get stuck!")
+            .define("nether_portal_generate_twin", true);
+
     public static Block getNetherPortalBlock() {
         return BuiltInRegistries.BLOCK.get(ResourceLocation.tryParse(NETHER_PORTAL_BLOCK_VALUE.get()));
     }
